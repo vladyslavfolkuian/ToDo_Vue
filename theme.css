@@ -1,0 +1,211 @@
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+    background: #fff;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Упрощаем работу с изображениями */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article>*+* {
+    margin-top: 1em;
+}
+
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/*
+
+Main style
+
+*/
+
+.cart {
+    margin-top: 40px;
+    padding: 40px 20px 60px 20px;
+    border-radius: 5px;
+    min-height: 100px;
+    width: 100%;
+    border: 1px solid #f8f9fa;
+    background: #f8f9fa;
+}
+
+.cart_title {
+    font-size: 18px;
+    color: #747474;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.cart_line {
+    margin: 20px 0;
+    height: 1px;
+    background: #ced4da;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.list-item-btn button {
+    margin-left: 10px;
+}
+
+.list-item-btn button:first-child {
+    margin: 0;
+}
+
+.cart-add {
+    color: #198754;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.cart-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.single {
+    margin-top: 40px;
+    padding: 40px 20px 60px 20px;
+    border-radius: 5px;
+    min-height: 100px;
+    width: 100%;
+    border: 1px solid #f8f9fa;
+    background: #f8f9fa;
+}
+
+.single-value {
+    font-size: 18px;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.single-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.single-back {
+    display: block;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+.cart-btn i, .single-wrapper-btn i {
+    margin-right: 8px;
+}
+
+.toDo {
+    margin-top: 40px;
+}
+
+.toDo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toDo-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.toDo-list-item input {
+    margin-right: 10px;
+}
